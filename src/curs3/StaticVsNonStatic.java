@@ -18,6 +18,7 @@ public class StaticVsNonStatic {
 	}
 }
 
+
  //1 compileaza
  //3 incarca in men membrii statici
  //5 instantiaza obiecte

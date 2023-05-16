@@ -14,6 +14,12 @@ public class StringComparison {
 		System.out.println(unu == trei);
 		System.out.println("Case  equals ");
 		System.out.println(unu.equals(trei));
+		
+		System.out.println("--------------");
+		System.out.println("Case  == ");
+		System.out.println(unu == patru);
+		System.out.println("Case  equals ");
+		System.out.println(unu.equals(patru));
 		// == compara locatia in memorie si pentru String e aceeasi
 		// equals compara continutul variabilelor
 	}
