@@ -18,8 +18,8 @@ public static void main(String[] args) {
 	int num2 = 8;
 	int num3 = 10;
 	
-	int y = num1 > num2 ? num1 : num2 < num3 ? num2 : num3;  
-
+	int y = num1 > num2 ? num1 : num2 > num3 ? num2 : num3;  
+System.out.println("Cel mai mare nr este: " + y );
 	 
 }
 }

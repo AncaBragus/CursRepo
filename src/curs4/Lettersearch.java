@@ -6,9 +6,9 @@ public class Lettersearch {
 
 	/**
 	 * prg care cere text de la tastatura
-	 * cautam in text litera A
-	 * Daca o gasim, print ca am gaasit si de cate ori exista in text
-	 * Daca nu o gasim printam ca nu am gasit liter
+	 * cautam in text litera a/A
+	 * Daca o gasim, print ca am gaasit litera si de cate ori exista in text
+	 * Daca nu o gasim printam ca nu am gasit litera
 	 */
 	public static void main(String[] args) {
 		System.out.println("Enter  a text");
@@ -24,6 +24,8 @@ for (int i=0; i<text.length(); i++){
 		counter++;	
 		}
 	}
-String resoult = (counter==0)? "Letter not found" :"Latter a was found"+counter;
-}
+String result = (counter==0)? "Letter a/A not found" :"Letter a/A was found: " + counter;
+System.out.println(result);
+scan.close();
+	}
 }
