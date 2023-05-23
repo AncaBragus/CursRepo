@@ -16,3 +16,19 @@ public class Rectangle {
 
 
 }
+
+/*
+ * clasa Driver --> Chrome = driver
+ * 
+ * clasa de PageObjects
+ * public PageObjects(driver){
+ * this.driver = driver}
+ * 
+ * buton Bakery = driver.findElement(locator);
+ * 
+ * clase de Test
+ * PageObject obj = new PageObject(driver)
+ * obj.Bakery.click();
+ * 
+ * 
+ */
