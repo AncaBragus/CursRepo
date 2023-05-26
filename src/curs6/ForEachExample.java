@@ -1,5 +1,5 @@
 package curs6;
-
+//import java.util.Arrays;
 public class ForEachExample {
 
 	/**
@@ -17,6 +17,7 @@ public class ForEachExample {
 		
 		for(String element:orase){
 			System.out.println(element);
+			//System.out.println(Arrays.toString(orase));
 		}
 			
 	}
