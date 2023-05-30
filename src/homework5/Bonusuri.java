@@ -64,6 +64,6 @@ public class Bonusuri {
 			System.out.println ("Vechime > 3 ani; bonus preferential?!");
 			}
 		}
-		System.out.println("bonus acordat - necunoscut" );
+		System.out.println("bonus acordat " + bonus );
 	}
 }
