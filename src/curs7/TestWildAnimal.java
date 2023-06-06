@@ -17,6 +17,7 @@ public class TestWildAnimal {
 		simba.makeSound();
 		simba.eatMeat();
 		
+		System.out.println("-----------");
 		//WebDriver driver = new CromeDriver(); -> mostenire
 		//WAnimal este mostenit de Lion
 		//Lion is an WildAnimal
@@ -24,7 +25,7 @@ public class TestWildAnimal {
 		//putem avea 
 		WildAnimal simba1 =new Lion();
 		simba1.makeSound();
-		//((Lion)simba1.eatMeat(); //trebuie sa fac un cast ; nu e recomandat...
+		(Lion)simba1.eatMeat(); //trebuie sa fac un cast ; nu e recomandat...
 	}
 
 }
