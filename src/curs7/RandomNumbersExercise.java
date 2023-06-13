@@ -5,46 +5,61 @@ import java.util.Random;
 public class RandomNumbersExercise {
 
 	/**
-	 * prg care genereaza 6 nr intre 0 si 9 
-	 * le pune in array
+	 * Facem un program care genereaza 6 numere intre 0-9
+	 * le pune intr-un array
 	 * nu tine numere duplicate
-	 * printeaza array
-	 * o met care  print array
-	 * o met care verifica daca nr sunt duplicate
-	 * o met care  genereaza nr
+	 * printeaza array-ul
+	 * 
+	 * o metoda care printeaza aray-ul
+	 * o metoda care verifica daca numerele sunt duplicate
+	 * o metoda care genereaza nr si le pune in array
+	 *  
 	 */
 	public final int LENGTH = 6;
-	public final int MAX_NUMBERS=9;
+	public final int MAX_NUMBERS = 9;
 	
-	public int[] generateNumbers(){
-		int[] numbers= new int[LENGTH];
-		Random  random= new  Random();
 	
-		for (int i=0; i<=LENGTH; i++){
-			int randomNR =0;
-			do{
-			randomNR = random.nextInt(MAX_NUMBERS);
-			} while (CheckDuplicate(numbers, randomNR));
-			numbers[i]=randomNR;
+	public int[] generateNumbers() {
+		int[] numbers =  new int[LENGTH];
+		Random random =  new Random();
+		for(int i=0; i<LENGTH; i++) {
+			int randomNR = 0;
+			do {
+				randomNR = random.nextInt(MAX_NUMBERS);
+
+			}while(checkDuplicate(numbers, randomNR));
+			
+			numbers[i] = randomNR;
 		}
-	return numbers;
+		return numbers;
 	}
 	
-	public void printArray(){
-		for ()
-	}
-	public boolean CheckDuplicate(int[]array, int nr){
-		for (int number:array){
-			if(number==nr){
+	public boolean checkDuplicate(int[] array, int nr) {
+		for(int number : array) {
+			if(number == nr) {
 				return true;
 			}
-			return false;
+		}
+		return false;
+	}
+	
+	
+	public void printArray(int[] array) {
+		/* for(int i = 0; i<LENGTH;i++) {
+			System.out.println(array[i]);
+		}*/
+		for(int nr : array) {
+			System.out.print(nr + " | ");
 		}
 	}
+	
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		RandomNumbersExercise obj =new RandomNumbersExercise();
+
+		RandomNumbersExercise obj =  new RandomNumbersExercise();
 		obj.printArray(obj.generateNumbers());
+		
+		
 	}
 
 }
