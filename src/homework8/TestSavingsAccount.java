@@ -1,8 +1,7 @@
 package homework8;
 
 import java.util.Scanner;
-
-import curs9.PostalCodeException;
+import java.util.InputMismatchException;
 public class TestSavingsAccount {
 	/**Clasa de executie TestSavingsAccount care simuleaza ATM –ul.
 	Creaza un obiect de tip Customer
@@ -18,13 +17,19 @@ public class TestSavingsAccount {
 		System.out.println("Salut " + customer.getName() +",");	
 		Scanner scan  = new Scanner(System.in);
 		System.out.println("Please enter the amount to widraw:");
-		double amount = scan.nextDouble();
+		
 		try {
-			saveAcc.withdraw(amount);
-		}catch(InsuficientFundsException e) {
-			System.out.println(e.getMessage());
-			System.out.println("Available balance is: " + saveAcc.getBalance());
-			System.out.println("Thank You for using ATM!");
+		 double amount = scan.nextDouble();	
+			try {
+				saveAcc.withdraw(amount);
+			}catch(InsuficientFundsException e) {
+				System.out.println(e.getMessage());
+				System.out.println("Available balance is: " + saveAcc.getBalance());
+				System.out.println("Thank You for using ATM!");
+			}
+		}
+		catch(InputMismatchException e) {
+			System.out.println("Please enter only numeric!");
 		}
 	}
 }
