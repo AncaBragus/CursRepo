@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class NumerePare {
 /**
-
  * Scriem un program care intreaba utilizatorul 10 numere. Tine acele
-numere intr-un array si le printeaza doar pe cele care sunt pare. Scriem rezolvarea folosind atat FOR cat si WHILE
+numere intr-un array si le printeaza doar pe cele care sunt pare.
+ Scriem rezolvarea folosind atat FOR cat si WHILE
  */
 	public static void main(String[] args) {
 		int n = 10;
@@ -17,14 +17,27 @@ numere intr-un array si le printeaza doar pe cele care sunt pare. Scriem rezolva
 			rArray[i] = scan.nextInt();	
 		}
 		scan.close();
-		System.out.println("-----------");
+		
+		System.out.println("----------------");
 		for (int i = 0 ; i < n; i++ ){
 		if (rArray[i] % 2 == 0){
 			System.out.print(rArray[i] + " ");
 			}	
 		}
 		System.out.println();
-		System.out.println("-----------");
+		System.out.println("----------------");
+		
+		printPareWhile(rArray);
+	}
+	
+	public static void printPareWhile(int[] pArray) {
+		int i = 0;
+		while ( i <= pArray.length-1  ){
+			if (pArray[i] % 2 == 0){
+				System.out.print(pArray[i] + " ");
+				}
+			i++;
+		}
 	}
 }
 		
