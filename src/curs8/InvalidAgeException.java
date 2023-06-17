@@ -1,7 +1,9 @@
 package curs8;
 
-public class InvalidAgeException extends Exception{
-	//public  void InvalidAgeException (){
-	//	super( message);
-	//}
+public class InvalidAgeException extends Exception {
+
+	public InvalidAgeException(String mesaj) {
+		super(mesaj);
+	}
+	
 }

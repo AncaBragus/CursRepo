@@ -3,7 +3,7 @@ package curs8;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ExeptionExample2 {
+public class ExceptionExample2 {
 
 	/**
 	 * @param args

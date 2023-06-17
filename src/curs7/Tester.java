@@ -1,9 +1,10 @@
 package curs7;
 
 public class Tester extends Angajat{
-
+     
 	private String seniority;
 	private String departament;
+	
 	
 	public String getSeniority() {
 		return seniority;
