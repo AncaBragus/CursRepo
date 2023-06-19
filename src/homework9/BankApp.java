@@ -54,9 +54,10 @@ public class BankApp {
 							System.out.println("Please enter only numeric!");
 						}
 					}else if (action == 2) {
-						System.out.println("Please enter the amount to Withdraw:");
+						System.out.println("Please enter the pozitive amount to Withdraw:");
 						try {
 						    int amount = scan.nextInt();
+						    if (amount>=0) {
 							try {
 								acc.withdraw(amount);
 								
@@ -64,6 +65,10 @@ public class BankApp {
 								System.out.println(e.getMessage());
 							}
 							acc.printBalance();
+						    }else {
+						    	System.out.println("You can not withdraw negative amount!");
+						    }
+							
 						}catch(InputMismatchException e) {
 							System.out.println("Please enter only numeric!");
 						}
@@ -84,8 +89,8 @@ public class BankApp {
 			Scanner scanc  = new Scanner(System.in);
 			System.out.println("Do you want to continue?(Y/N)");
 				continu = scanc.next();
-				
-				if (continu.equals("Y") || continu.equals("y"))
+				if(continu.equalsIgnoreCase("y"))
+				//if (continu.equals("Y") || continu.equals("y"))
 				{
 				    continue;
 				}else  {

@@ -14,7 +14,7 @@ public class Account {
 	//accountOwner.name="Dragos";
 	
 	public Account(int accountNumber, double balance, Customer accountOwner) {
-		super();
+		//super(); 
 		this.accountNumber = accountNumber;
 		this.balance = balance;
 		this.accountOwner = accountOwner;

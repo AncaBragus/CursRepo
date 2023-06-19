@@ -19,17 +19,24 @@ public class TestSavingsAccount {
 		System.out.println("Please enter the amount to widraw:");
 		
 		try {
-		 double amount = scan.nextDouble();	
+		 double amount = scan.nextDouble();
+		 if (amount>=0) {
 			try {
 				saveAcc.withdraw(amount);
 			}catch(InsuficientFundsException e) {
 				System.out.println(e.getMessage());
 				System.out.println("Available balance is: " + saveAcc.getBalance());
-				System.out.println("Thank You for using ATM!");
+				
 			}
+		} else {
+			System.out.println("You can not withdraw negative amount");
+		}
 		}
 		catch(InputMismatchException e) {
 			System.out.println("Please enter only numeric!");
+		}
+		finally {
+			System.out.println("Thank You for using ATM!");
 		}
 	}
 }

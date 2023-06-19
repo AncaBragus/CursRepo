@@ -26,7 +26,7 @@ public class SavingsAccount extends Account{
 				balance = balance-amount;
 				System.out.println("Please pick your money!");
 				System.out.println("Your new balance is: " + balance);
-				System.out.println("Thank you for using ATM!");
+				//System.out.println("Thank you for using ATM!");
 			}		
 	}
 }

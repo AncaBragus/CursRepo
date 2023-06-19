@@ -6,7 +6,7 @@ public class Teacher {
 	 String schedule;
 
 	public Teacher(String course, int experienceYears, String schedule) {
-		super();
+		//super();
 		this.course = course;
 		this.experienceYears = experienceYears;
 		this.schedule = schedule;
